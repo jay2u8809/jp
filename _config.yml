@@ -1,0 +1,39 @@
+name: J.ian's Wiki
+author: Jay Ian
+baseurl: 
+description: Developer in Tokyo
+github: http://www.github.com/jay2u8809
+instagram: https://www.instagram.com/branjay809/
+facebook: http://www.facebook.com
+linkedin: http://www.linkedin.com
+email: jay2u8809@gmail.com
+location: Tokyo, Japan
+disqus: diqus-username  #소셜 댓글 서비스
+
+##Make sure to edit the above fields, especially for disqus.
+
+
+#highlighter: pygments
+#markdown: redcarpet
+#redcarpet:
+#  extensions: ["tables"]
+
+#languages
+languages: ["ko", "ja", "en"]
+exclude_from_localizations: ["javascript", "images"]
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+category_dir: category/
+category_page_dir: category/page/
+tag_dir: tag/

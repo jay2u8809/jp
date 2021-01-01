@@ -1,0 +1,42 @@
+---
+layout: default
+title: Category
+permalink: category/page/
+icon: th-list
+type: page
+---
+
+<div class="page clearfix">
+    <div class="left">
+      <h1>{{page.title}}</h1>
+      <hr>
+      <ul>
+
+      <!-- link1, link2 variable -->
+      {% capture link1 %}{{ site.url }}{% endcapture %}
+      {% capture link2 %}{{ site.url }}/ja{% endcapture %}
+
+       {% for category in site.categories %}
+       <span class="{{category | first}}">
+        <h2 id="{{category | first}}">{{category | first}}</h2>
+        {% for posts in category %}
+          {% for post in posts %}
+            {% if post.url %}
+            <li>
+              <time>
+                {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
+              </time>
+              {% if site.lang == "ko" %}
+                <a class="title" href="{{ post.url | prepend: link1 }}">{{ post.title }}</a>
+              {% elsif site.lang == "ja" %}
+                <a class="title" href="{{ post.url | prepend: link2 }}">{{ post.title }}</a>
+              {% endif %}
+            </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </span>
+       {% endfor %}
+      </ul>
+    </div>
+  </div>
