@@ -1,6 +1,8 @@
 name: J.ian's Wiki
 author: Jay Ian
 baseurl: 
+kourl: https://jay2u8809.github.io/
+jpurl: https://jay2u8809.github.io/jp/
 description: Developer in Tokyo
 github: http://www.github.com/jay2u8809
 instagram: https://www.instagram.com/branjay809/
@@ -19,8 +21,8 @@ disqus: diqus-username  #소셜 댓글 서비스
 #  extensions: ["tables"]
 
 #languages
-languages: ["ko", "ja", "en"]
-exclude_from_localizations: ["javascript", "images"]
+# languages: ["ko", "ja", "en"]
+# exclude_from_localizations: ["javascript", "images"]
 
 defaults:
   - scope:
