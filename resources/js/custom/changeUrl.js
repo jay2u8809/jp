@@ -11,12 +11,14 @@ $(function() {
     let hasJp = currentPathName.indexOf(jpLangPath) != -1;
 
     // Breadcrumbs
-    let categoryUlr = document.querySelector('#categoryUrl');
+    let postCategoryUrl = document.querySelector('#postCategoryUrl');
     let categoryName = document.querySelector('#categoryName');
-    if (categoryUlr !== null && categoryName !== null) {
+    if (postCategoryUrl !== null && categoryName !== null) {
         
-        let newCategoryUrl = categoryUlr.getAttribute('href') + 'page/#' + categoryName.getAttribute('value');
-        categoryUlr.setAttribute('href', newCategoryUrl);
+        let categoryNameVal = categoryName.getAttribute('value');
+        let newPostCategoryUrl = postCategoryUrl.getAttribute('href') + 'page/#' + categoryNameVal;
+        postCategoryUrl.setAttribute('href', newPostCategoryUrl);
+        postCategoryUrl.text = categoryNameVal;
     }
 
 
