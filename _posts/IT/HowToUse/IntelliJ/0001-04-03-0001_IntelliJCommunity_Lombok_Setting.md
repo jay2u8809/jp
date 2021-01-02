@@ -11,6 +11,7 @@ description:
 author: J.ian
 ---
 <input type="hidden" id="categoryName" value="HowToUse" />
+<input type="hidden" id="postedDate" value="2019-09-22" />
 
 > IntelliJ CommunityバージョンでLombok設定する
 

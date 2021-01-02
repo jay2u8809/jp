@@ -11,6 +11,7 @@ description:
 author: J.ian
 ---
 <input type="hidden" id="categoryName" value="HowToUse" />
+<input type="hidden" id="postedDate" value="2021-01-01" />
 
 > IntelliJを使用しながら便利なショートカットに対して纏めてみる
 

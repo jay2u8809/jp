@@ -66,4 +66,13 @@ $(function() {
                                     ? jpLangPath + originBtnHref
                                     : originBtnHref);
     }
+
+
+    // Setting Post Date
+    let postedDate = document.querySelector('#postedDate');
+    if (postedDate !== null) {
+
+        let postDateInnerHTML = '&nbsp;<i class="fa fa-calendar-o"></i> ';
+        document.querySelector('#postDate').innerHTML = postDateInnerHTML + postedDate.getAttribute('value');
+    }
 });

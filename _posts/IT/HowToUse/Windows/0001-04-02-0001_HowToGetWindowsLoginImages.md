@@ -11,6 +11,7 @@ description:
 author: J.ian
 ---
 <input type="hidden" id="categoryName" value="HowToUse" />
+<input type="hidden" id="postedDate" value="2019-12-30" />
 
 > Windows10のログイン画面のイメージ（画像）を取得する方法について調べてみる
 
@@ -23,7 +24,9 @@ ___
 <br />
 
 &nbsp; 
- **`%LocalAppData%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets`**      
+```
+    %LocalAppData%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets
+```      
 <br />
 
 &nbsp;&nbsp; 
