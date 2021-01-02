@@ -58,7 +58,7 @@
     </li> 
     <!-- <li><a href="{{ site.baseurl }}/list.html">List</a></li> -->
     <!-- <li><a href="{{ site.baseurl }}/links.html">Links</a></li> -->
-    <li><a href="{{ site.baseurl }}/projects.html">Projects</a></li>
+    <!-- <li><a href="{{ site.baseurl }}/projects.html">Projects</a></li> -->
     <li><a href="{{ site.baseurl }}/about.html">About</a></li>
     <!--<li>Tags</li>-->
     <!--{% for tag in site.tags %}-->
@@ -72,6 +72,9 @@
       <li> <a href="{{ site.facebook }}"><i class="fa fa-facebook-square"></i> facebook</a></li> 
       -->
       <li> <a href="{{ site.github }}"><i class="fa fa-github-square"></i> github</a> </li>
+
+      {% capture kourl %}{{ site.baseurl_root }}{% endcapture %}
+      {% capture jpurl %}{{ site.baseurl_root }}/jp/{% endcapture %}
       <li class="lang-icon"> <a id="koUrl" href=""><img src="/resources/images/icon/32px-Flag_of_South_Korea.png"> Kor </a> </li>
       <li class="lang-icon"> <a id="jpUrl" href=""><img src="/resources/images/icon/32px-Flag_of_Japan.png"> Jap </a> </li>
     </div>
