@@ -27,7 +27,7 @@ ___
 <br />
 
 &nbsp;&nbsp; 
-上のパスをコピーしてログイン画面のイメージが保存されている所に移動する     
+上のパスをアドレスバーにコピーしてログイン画面のイメージが保存されている所に移動する     
 &nbsp;&nbsp; 
 上のパスに移動すると拡張子がないファイルがたくさんあるが、このファイルが今まで保存されたログイン画面のイメージである     
 ![windowsLoginImage](/resources/images/HowToUse/Windows/windowsLoginImagePath.PNG "windowsLoginImagePath")      
