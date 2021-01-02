@@ -9,15 +9,14 @@ layout: default
     </small>
   </p> <hr/>
   <span>
-    <a id="koUrl" href=""><img src="/resources/images/icon/32px-Flag_of_South_Korea.png"></a>
-    <a id="jpUrl" href=""><img src="/resources/images/icon/32px-Flag_of_Japan.png"> </a>
+    <a id="koPostUrl" href=""><img src="/resources/images/icon/32px-Flag_of_South_Korea.png"></a>
+    <a id="jpPostUrl" href=""><img src="/resources/images/icon/32px-Flag_of_Japan.png"> </a>
   </span>
   <hr/>
   <div class="post">
     {{ content }}
   </div>
-  <input type="hidden" value="{{ page.lang }}" id="postLang" />
 </div>
-{% include share.html %}
+<!-- {% include share.html %} -->
 {% include pager.html %}
 <!-- {% include comment.html %} -->

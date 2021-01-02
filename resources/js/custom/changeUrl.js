@@ -3,19 +3,55 @@
  */
 
 $(function() {
+
+    let currentUrlOrigin = location.origin;
+    let currentPathName = location.pathname;
+    let jpLangPath = "/jp"
+
+    let hasJp = currentPathName.indexOf(jpLangPath) != -1;
+
+    // Blog
     let koUrl = document.querySelector('#koUrl');
     let jpUrl = document.querySelector('#jpUrl');
 
-    if (koUrl !== undefined || jpUrl !== undefined) {
+    if (koUrl !== null && jpUrl !== null) {
         
-        let currentUrlOrigin = location.origin;
-        let currentPathName = location.pathname;
-        let hasJp = currentPathName.indexOf('/jp/') != -1;
-        koUrl.setAttribute('href',  hasJp
-                                    ? currentUrlOrigin + currentPathName.slice(3, currentPathName.length)
+        koUrl.setAttribute('href', currentUrlOrigin);
+        jpUrl.setAttribute('href', currentUrlOrigin + jpLangPath);
+    }
+
+
+    // Post
+    let koPostUrl = document.querySelector('#koPostUrl');
+    let jpPostUrl = document.querySelector('#jpPostUrl');
+
+    if (koPostUrl !== null && jpPostUrl !== null) {
+
+        koPostUrl.setAttribute('href',  hasJp
+                                    ? currentUrlOrigin + currentPathName.slice(jpLangPath.length, currentPathName.length)
                                     : location.href);
-        jpUrl.setAttribute('href',  hasJp
+        jpPostUrl.setAttribute('href',  hasJp
                                     ? location.href
-                                    : currentUrlOrigin + '/jp' + currentPathName);
+                                    : currentUrlOrigin + jpLangPath + currentPathName);
+    }
+
+
+    // Next/Previous Btn
+    let nextPostBtn = document.querySelector('#nextPostBtn');
+    let prevPostBtn = document.querySelector('#prevPostBtn');
+    let originBtnHref = null;
+
+    if (nextPostBtn !== null) {
+        originBtnHref = nextPostBtn.getAttribute('href');
+        nextPostBtn.setAttribute('href',  hasJp
+                                    ? jpLangPath + originBtnHref
+                                    : originBtnHref);
+    }
+
+    if (prevPostBtn !== null) {
+        originBtnHref = prevPostBtn.getAttribute('href');
+        prevPostBtn.setAttribute('href',  hasJp
+                                    ? jpLangPath + originBtnHref
+                                    : originBtnHref);
     }
 });
