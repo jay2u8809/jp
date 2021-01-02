@@ -17,8 +17,11 @@ author: J.ian
 
 ___
 
-&nbsp; - &nbsp; **`command` + `shift` + `>`**     
+&nbsp;
+ - &nbsp; **`command` + `shift` + `>`**     
 <br />
+
+&nbsp;&nbsp; 
 Finder（ファインダー）でコマンドキーとシフトキー、「>」キーを一緒に押すと、隠しファイルおよびフォルダが表示される
 
 <br /><br />
