@@ -9,6 +9,7 @@ comments: false
 description:
 author: J.ian
 ---
+<input type="hidden" id="categoryName" value="HowToUse" />
 
 > Mac OSで隠しファイルまたフォルダを表示する
 

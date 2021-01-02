@@ -21,3 +21,4 @@ example/_site
 .DS_Store
 .jekyll-cache
 _site
+templates

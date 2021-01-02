@@ -10,6 +10,7 @@ comments: false
 description:
 author: J.ian
 ---
+<input type="hidden" id="categoryName" value="HowToUse" />
 
 > IntelliJ CommunityバージョンでLombok設定する
 

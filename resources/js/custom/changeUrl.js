@@ -10,6 +10,16 @@ $(function() {
 
     let hasJp = currentPathName.indexOf(jpLangPath) != -1;
 
+    // Breadcrumbs
+    let categoryUlr = document.querySelector('#categoryUrl');
+    let categoryName = document.querySelector('#categoryName');
+    if (categoryUlr !== null && categoryName !== null) {
+        
+        let newCategoryUrl = categoryUlr.getAttribute('href') + 'page/#' + categoryName.getAttribute('value');
+        categoryUlr.setAttribute('href', newCategoryUrl);
+    }
+
+
     // Blog
     let koUrl = document.querySelector('#koUrl');
     let jpUrl = document.querySelector('#jpUrl');
