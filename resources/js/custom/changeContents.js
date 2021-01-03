@@ -30,6 +30,13 @@ $(function() {
         
         koUrl.setAttribute('href', currentUrlOrigin);
         jpUrl.setAttribute('href', currentUrlOrigin + jpLangPath);
+
+        koUrl.innerHTML = hasJp 
+                        ? koUrl.innerHTML 
+                        : koUrl.firstChild.outerHTML + '<b>' + koUrl.text + '</b>';
+        jpUrl.innerHTML = hasJp 
+                        ? jpUrl.firstChild.outerHTML + '<b>' + jpUrl.text + '</b>' 
+                        : jpUrl.innerHTML;
     }
 
 
