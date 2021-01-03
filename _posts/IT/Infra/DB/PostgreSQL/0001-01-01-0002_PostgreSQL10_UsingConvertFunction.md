@@ -9,7 +9,6 @@ tags:
 comments: false
 description:
 author: J.ian
-date:   2019-02-03
 ---
 
 <input type="hidden" id="categoryName" value="Database" />
