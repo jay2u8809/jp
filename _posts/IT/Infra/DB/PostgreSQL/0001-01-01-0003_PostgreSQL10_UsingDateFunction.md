@@ -23,7 +23,7 @@ ___
 &nbsp;&nbsp;
 **`to_char(`** 元データ, 変更するデータタイプ **`)`**     
 &nbsp;&nbsp;&nbsp;&nbsp;
-- 日付を文字、特定な形式で変更     
+ - 日付を文字、特定な形式で変更     
 
 ```postgresql
 
@@ -55,9 +55,9 @@ ___
 
 #### 2) extract
 &nbsp;&nbsp; 
-**`extract`** メソッド        
+**`extract()`** メソッド        
 &nbsp;&nbsp;&nbsp;&nbsp;
-日付の一部の情報を「double precision」タイプで変更して返還       
+ - 日付の一部の情報を「double precision」タイプで変更して返還       
 
 ```postgresql
 
@@ -69,9 +69,9 @@ ___
 
 #### 3) date_part
 &nbsp;&nbsp;
-**`date_part`** (要る情報, 日付)      
+**`date_part (`** 要る情報, 日付 **`)`**      
 &nbsp;&nbsp;&nbsp;&nbsp;
-日付の一部の情報を「double precision」タイプで変更して返還       
+ - 日付の一部の情報を「double precision」タイプで変更して返還       
 
 ```postgresql
 
@@ -83,9 +83,9 @@ ___
 
 #### 4) interval
 &nbsp;&nbsp; 
-**`interval`**;      
+**`interval`**      
 &nbsp;&nbsp;&nbsp;&nbsp;
-日付を算出      
+ - 日付を算出      
 
 ```postgresql
 
