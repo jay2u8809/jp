@@ -59,7 +59,7 @@ p
 
 .container
 {
-  width:80%;
+  width:95%;
   padding-right:0;
   padding-top:30px
 }
@@ -697,7 +697,7 @@ time
     border-top: none;
     left: 0px;
 }
- .nav-toggle {
+  .nav-toggle {
     display: ;
   }
 #wrapper.active {
@@ -726,10 +726,10 @@ time
 
 @media screen and (max-width: 500px) {
   #welcome-greeting h2 {
-   font-size: 15px; 
-   transition: all 0.2s ease 0s;
-   font-weight: 200;
-   line-height: 30px;
+    font-size: 15px; 
+    transition: all 0.2s ease 0s;
+    font-weight: 200;
+    line-height: 30px;
 
   }
   .container {
