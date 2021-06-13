@@ -1,84 +1,17 @@
-<div class="navbar navbar-default" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <p class="navbar-brand"><a href="{{ site.baseurl }}/"><h1 class="brand">{{ site.name }}</h1></a></p>
-    </div>
-    <!--Mobile-->
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-      <!-- 
-      <li><a href="{{ site.baseurl }}/list.html">List</a></li>
-      <li><a href="{{ site.baseurl }}/links.html">Links</a></li>
-      <li><a href="{{ site.baseurl }}/projects.html">Projects</a></li> 
-      -->
-      <li><a href="{{ site.baseurl }}/{{ site.category_dir }}">Category</a></li>
-        {% for cat in site.categories %}
-          <li>
-            <a href="{{ site.baseurl }}/category/page/#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">
-              &nbsp;&nbsp;-&nbsp;{{ cat[0] }} <span class="badge">{{ cat[1].size }}</span>
-            </a>
-          </li>
-        {% endfor %}
-        <!--<li>Tags</li>-->
-        <!--{% for tag in site.tags %}-->
-        <!--<a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a> &nbsp;-->
-        <!--{% endfor %}-->
-      <li><a href="https://www.notion.so/3f36bc16c0b5461fa92636b5a4ea3363">PortFolio</a></li>
-      <li><a href="{{ site.baseurl }}/about.html">About</a></li>
+{% if site.data.navigation %}
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">{{ site.data.text[site.locale].menu_label | default: 'Menu' }}</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul>
+        {%- for link in site.data.navigation -%}
+          {%- if link.url contains '://' -%}
+            {%- assign url = link.url -%}
+          {%- else -%}
+            {%- assign url = link.url | relative_url -%}
+          {%- endif -%}
+          <li><a href="{{ url }}">{{ link.title }}</a></li>
+        {%- endfor -%}
       </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</div>
-
-<!-- Sidebar -->
-<div id="sidebar-wrapper">
-  <ul class="sidebar-nav">
-    <li class="sidebar-brand"><a href="{{ site.baseurl }}/"><h1 class="brand">{{ site.name }}</h1></a><h3>{{ site.description }}</h3></li>
-    <hr />
-    <li><!-- Category -->
-      <div class="sidebar-nav-item"><a href="{{ site.baseurl }}/{{ site.category_dir }}">Category</a></div>
-      <nav class="content-ul">
-          {% for cat in site.categories %}
-          <!--<li>-->
-            <!--<span class="name">&nbsp;&nbsp;{{ category | first }}</span>-->
-            <!--<span class="badge">{{ category | last | size }}</span>-->
-          <!--</li>-->
-            <li>
-              <a href="{{ site.baseurl }}/category/page/#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">
-                &nbsp;&nbsp;-&nbsp;{{ cat[0] }} <span class="badge">{{ cat[1].size }}</span>
-              </a>
-            </li>
-          {% endfor %}
-        </nav>
-    </li> 
-    <!-- <li><a href="{{ site.baseurl }}/list.html">List</a></li> -->
-    <!-- <li><a href="{{ site.baseurl }}/links.html">Links</a></li> -->
-    <!-- <li><a href="{{ site.baseurl }}/projects.html">Projects</a></li> -->
-    <li><a href="https://www.notion.so/3f36bc16c0b5461fa92636b5a4ea3363">PortFolio</a></li>
-    <li><a href="{{ site.baseurl }}/about.html">About</a></li>
-    <!--<li>Tags</li>-->
-    <!--{% for tag in site.tags %}-->
-    <!--<a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a> &nbsp;-->
-    <!--{% endfor %}-->
-    <hr />
-    <div id="social-wrapper">
-      <!--
-      <li> <a href="{{ site.instagram }}"><i class="fa fa-instagram-square"></i> @instagram</a></li>
-      <li> <a href="{{ site.linkedin }}"><i class="fa fa-linkedin-square"></i> linkedin</a> </li>
-      <li> <a href="{{ site.facebook }}"><i class="fa fa-facebook-square"></i> facebook</a></li> 
-      -->
-      <li> <a href="{{ site.github }}" target="_blank"><i class="fa fa-github-square"></i> github</a> </li>
-
-      {% capture kourl %}{{ site.baseurl_root }}{% endcapture %}
-      {% capture jpurl %}{{ site.baseurl_root }}/jp/{% endcapture %}
-      <li class="lang-icon"> <a id="koUrl" href=""><img src="/resources/images/icon/32px-Flag_of_South_Korea.png"> Kor </a> </li>
-      <li class="lang-icon"> <a id="jpUrl" href=""><img src="/resources/images/icon/32px-Flag_of_Japan.png"> Jap </a> </li>
-    </div>
-  </ul>
-</div>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+{% endif %}

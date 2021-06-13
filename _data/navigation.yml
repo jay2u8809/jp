@@ -1,0 +1,16 @@
+# Sample site navigation bar links
+
+- title: Home
+  url: /
+- title: Posts
+  url: /posts/
+- title: Categories
+  url: /categories/
+- title: Tags
+  url: /tags/
+- title: Portfolio
+  url: https://www.notion.so/3f36bc16c0b5461fa92636b5a4ea3363
+- title: Search
+  url: /search/
+- title: Korean
+  url: https://jay2u8809.github.io

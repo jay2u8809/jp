@@ -1,0 +1,15 @@
+# Authors
+
+Billy Rick:
+  name: Jay Ian
+  picture: /images/bio-photo-2.jpg
+  twitter: "@jay2u8809"
+  links:
+    - title: Github
+      url: https://github.com/jay2u8809
+      icon: fa fa-github-square
+
+Cornelius Fiddlebone:
+  name: Cornelius Fiddlebone
+  picture: /images/bio-photo.jpg
+  twitter: corneliusfiddlebone
